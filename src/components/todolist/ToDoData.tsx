@@ -13,17 +13,17 @@ const ToDoData = [
     },
     {
         id: 3,
-        text: "Clean gecko tank",
+        text: "Do the laundry",
         completed: false
     },
     {
         id: 4,
-        text: "Mow lawn",
+        text: "Clean up the room",
         completed: true
     },
     {
         id: 5,
-        text: "Catch up on Arrested Development",
+        text: "Catch up on Cobli's development",
         completed: false
     }
 ]

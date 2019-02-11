@@ -12,9 +12,10 @@ class ToDoList extends Component <{}, IState> {
         this.state = {
             todos: ToDoData,
         }
+        this.handleChange = this.handleChange.bind(this)
     }
 
-    handleChange(id: number): any {
+    handleChange(id: number) {
         this.setState(prevState => {
             const updatedToDo = prevState.todos.map((todo: any) => {
                 if (todo.id === id) {
@@ -29,7 +30,7 @@ class ToDoList extends Component <{}, IState> {
     }
 
     render() {
-        const todoItems = this.state.todos.map((item: any) => <ToDoItem item={item} handleChange={this.handleChange(item.id)}/>)
+        const todoItems = this.state.todos.map((item: any) => <ToDoItem item={item} handleChange={this.handleChange}/>)
 
         return (
         <div className="todolist">

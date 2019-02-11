@@ -6,7 +6,7 @@ interface IProps {
         text: string,
         completed: boolean,
     },
-    handleChange(id: number): void,
+    handleChange: (id: number, event: React.FormEvent<HTMLInputElement>) => void,
 }
 
 function ToDoItem(props: IProps) {
@@ -15,7 +15,7 @@ function ToDoItem(props: IProps) {
             <input 
                 type="checkbox" 
                 checked={props.item.completed} 
-                onChange={() => props.handleChange(props.item.id)}
+                onChange={(event) => props.handleChange(props.item.id, event)}
             />
             <p> {props.item.text} </p>
         </div>
